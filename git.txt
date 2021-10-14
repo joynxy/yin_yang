@@ -17,4 +17,4 @@ git remote -v (check if configured properly)
 git checkout -b "new-branch-name-here"         (create new branch. you can create your own branch to play play. * this will clone the current branch you are in to the new one)
 git checkout <branch-name>    (switch to that branch, e.g. git checkout main   OR   git checkout dev)
 
-hello
+hi im testing
