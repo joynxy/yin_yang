@@ -1,7 +1,7 @@
 gitbefore working:
 git fetch --all
 THEN
-git pull origin <insert specified branch>
+git pull origin development
 
 
 when u wanna upload:
