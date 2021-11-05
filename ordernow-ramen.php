@@ -1,3 +1,7 @@
+<?php
+include "php/setup_session.php";
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -5,20 +9,34 @@
     <title>Yin Yang Ramen House</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="index.css">
+    
 </head>
 
 <body>
     <div class="topnav">
         <div class="topnav-left">
-            <a href="index.html"><img src="assets/logo.png"></a>
+            <a href="index.php"><img src="assets/logo.png"></a>
         </div>
         <div class="topnav-right">
-            <a href="index.html">Home</a>
-            <a href="aboutus.html">About us</a>
-            <a href="ordernow.html">Order now</a>
-            <a href="careers.html">Careers</a>
-            <a href="contactus.html">Contact us</a>
-            <a href="shoppingcart.html"><img src="assets/cart.png" width="60%" height="auto"></a>
+            <a href="index.php">Home</a>
+            <a href="aboutus.php">About us</a>
+            <a href="ordernow.php">Order now</a>
+            <a href="careers.php">Careers</a>
+            <a href="contactus.php">Contact us</a>
+            <a href="shoppingcart.php">
+                <span id="shopping_cart">
+                    <img src="assets/cart.png" width="50%" height="auto">
+                    <?php
+                    $total = 0;
+                    for ($i = 0; $i < count($_SESSION['cart']); $i++) {
+                        if ($_SESSION['cart'][$i] > 0) {
+                            $total += $_SESSION['cart'][$i];
+                        }
+                    }
+                    echo $total;
+                    ?>
+                </span>
+            </a>
         </div>
     </div>
     <div>
@@ -29,47 +47,63 @@
         <p class="header-1">Ramen</p>
         <figure class="menu">
             <img src="assets/ramen_1.png" />
-            <figcaption id="order-name">Yin Yang Specialty Ramen</figcaption>
+            <figcaption id="order-name">$18.00<br>Yin Yang Specialty Ramen</figcaption>
             <figcaption id="order-info">Tender chashu pork slices is paired with fresh handcrafted ramen in our
                 signature Tonkotsu broth that has been boiled for 12 hours.</figcaption>
-            <input type="number" name="specialty" id="inputbox" value="0" min="0">
+            <form method="get" action="php/add_to_cart_hp_dotd.php">
+                <label><input type=submit value="Add to cart" name="specialty"></label>
+            </form>
         </figure>
+
         <figure class=" menu">
             <img src="assets/ramen_2.png" />
-            <figcaption id="order-name">Miso Ramen</figcaption>
+            <figcaption id="order-name">$16.00<br>Miso Ramen</figcaption>
             <figcaption id="order-info">Imported directly from Japan, the miso creates a rich and flavourful broth that
                 complements the sweet corn topping.</figcaption>
-            <input type="number" name="specialty" id="inputbox" value="0" min="0">
+            <form method="get" action="php/add_to_cart_hp_dotd.php">
+                <label><input type=submit value="Add to cart" name="miso"></label>
+            </form>
         </figure>
+
         <figure class="menu">
             <img src="assets/ramen_3.png" />
-            <figcaption id="order-name">Karaka Ramen</figcaption>
+            <figcaption id="order-name">$17.00<br>Karaka Ramen</figcaption>
             <figcaption id="order-info">A unique concoction of chillies is infused into the thick Tonkotsu soup, giving
                 a spicy kick to this incredible bowl of ramen.</figcaption>
-            <input type="number" name="specialty" id="inputbox" value="0" min="0">
+            <form method="get" action="php/add_to_cart_hp_dotd.php">
+                <label><input type=submit value="Add to cart" name="karaka"></label>
+            </form>
         </figure><br>
+
         <figure class="menu">
             <img src="assets/ramen_4.png" />
-            <figcaption id="order-name">Black Tonkotsu Ramen</figcaption>
+            <figcaption id="order-name">$17.00<br>Black Tonkotsu Ramen</figcaption>
             <figcaption id="order-info">The essence of Japanese black garlic is steeped into the broth,
                 creating an intense flavour to pair with crunchy black fungus.</figcaption>
-            <input type="number" name="specialty" id="inputbox" value="0" min="0">
+            <form method="get" action="php/add_to_cart_hp_dotd.php">
+                <label><input type=submit value="Add to cart" name="tonkotsu"></label>
+            </form>
         </figure>
+
         <figure class="menu">
             <img src="assets/ramen_5.png" />
-            <figcaption id="order-name">Mazesoba Ramen</figcaption>
+            <figcaption id="order-name">$17.00<br>Mazesoba Ramen</figcaption>
             <figcaption id="order-info">Garnished with a lavish portion of sautéed pork, sweet corn and green scallions,
                 savour the springy texture of our handmade ramen.</figcaption>
-            <input type="number" name="specialty" id="inputbox" value="0" min="0">
+            <form method="get" action="php/add_to_cart_hp_dotd.php">
+                <label><input type=submit value="Add to cart" name="mazesoba"></label>
+            </form>
         </figure>
+
         <figure class="menu">
             <img src="assets/ramen_6.png" />
-            <figcaption id="order-name">Tantanmen Ramen</figcaption>
+            <figcaption id="order-name">$17.00<br>Tantanmen Ramen</figcaption>
             <figcaption id="order-info">Fermented beans and sesame gives this ramen a fragrant aroma and exquisite
                 taste, topped off with slices of braised meat. </figcaption>
-            <input type="number" name="specialty" id="inputbox" value="0" min="0">
+            <form method="get" action="php/add_to_cart_hp_dotd.php">
+                <label><input type=submit value="Add to cart" name="tantanmen"></label>
+            </form>
         </figure><br>
-        <input type="button" class="button" value="Add to cart">
     </div>
 </body>
 

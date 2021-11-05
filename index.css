@@ -204,3 +204,33 @@ a:hover {
     height: 28px;
     padding: 10px 15px 0px 0px;
 }
+
+/*Careers Page*/
+.careers-contact-table {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 90%;
+}
+
+.careers-contact-table tr{
+    overflow: hidden;
+    height: 40px;
+    white-space: nowrap;
+}
+
+.careers-contact-table td{
+    text-align: left;
+    vertical-align: top;
+}
+
+
+/* -----------------------------AMENDMENTS------------------- */
+.cart_table_centre {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cart_table_padding{
+    padding:10px;
+    text-align:center
+}

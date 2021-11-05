@@ -1,3 +1,7 @@
+<?php
+include "php/setup_session.php";
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -5,20 +9,34 @@
     <title>Yin Yang Ramen House</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="index.css">
+    
 </head>
 
 <body>
     <div class="topnav">
         <div class="topnav-left">
-            <a href="index.html"><img src="assets/logo.png"></a>
+            <a href="index.php"><img src="assets/logo.png"></a>
         </div>
         <div class="topnav-right">
-            <a href="index.html">Home</a>
-            <a href="aboutus.html">About us</a>
-            <a href="ordernow.html">Order now</a>
-            <a href="careers.html">Careers</a>
-            <a href="contactus.html">Contact us</a>
-            <a href="shoppingcart.html"><img src="assets/cart.png" width="60%" height="auto"></a>
+            <a href="index.php">Home</a>
+            <a href="aboutus.php">About us</a>
+            <a href="ordernow.php">Order now</a>
+            <a href="careers.php">Careers</a>
+            <a href="contactus.php">Contact us</a>
+            <a href="shoppingcart.php">
+                <span id="shopping_cart">
+                    <img src="assets/cart.png" width="50%" height="auto">
+                    <?php
+                    $total = 0;
+                    for ($i = 0; $i < count($_SESSION['cart']); $i++) {
+                        if ($_SESSION['cart'][$i] > 0) {
+                            $total += $_SESSION['cart'][$i];
+                        }
+                    }
+                    echo $total;
+                    ?>
+                </span>
+            </a>
         </div>
     </div>
     <div>
@@ -29,42 +47,54 @@
         <figure class="menu">
             <!-- Some images are taken from: https://www.sunwithmoon.com.sg/wp-content/uploads/2021/04/2021-SWM-Drinks-Menu-PDF.pdf -->
             <img src="assets/drinks_1.png" />
-            <figcaption id="order-name">Citrus Lime Cocktail</figcaption>
+            <figcaption id="order-name">$7.00<br>Citrus Lime Cocktail</figcaption>
             <figcaption id="order-info">A refreshing cocktail mix of lemon, lime and orange.</figcaption>
-            <input type="number" name="specialty" id="inputbox" value="0" min="0">
+            <form method="get" action="php/add_to_cart_hp_dotd.php">
+                <label><input type=submit value="Add to cart" name="citrus"></label>
+            </form>
         </figure>
         <figure class=" menu">
             <img src="assets/drinks_2.png" style="height:250px; width: auto" ; />
-            <figcaption id="order-name">Yuzu Fizz</figcaption>
+            <figcaption id="order-name">$7.00<br>Yuzu Fizz</figcaption>
             <figcaption id="order-info">Sparkling, zesty blend of honey Yuzu with lemon juice and soda.</figcaption>
-            <input type="number" name="specialty" id="inputbox" value="0" min="0">
+            <form method="get" action="php/add_to_cart_hp_dotd.php">
+                <label><input type=submit value="Add to cart" name="yuzu"></label>
+            </form>
         </figure>
         <figure class="menu">
             <img src="assets/drinks_3.png" style="height: 250px; width: auto" />
-            <figcaption id="order-name">Grapefruit Plum Soda</figcaption>
+            <figcaption id="order-name">$6.00<br>Grapefruit Plum Soda</figcaption>
             <figcaption id="order-info">Boost immunity with this anti-oxidising grapefruit and Tsuyu Akane
                 plum soda.</figcaption>
-            <input type="number" name="specialty" id="inputbox" value="0" min="0">
+            <form method="get" action="php/add_to_cart_hp_dotd.php">
+                <label><input type=submit value="Add to cart" name="plum"></label>
+            </form>
         </figure><br>
         <figure class="menu">
             <img src="assets/drinks_4.png" />
-            <figcaption id="order-name">Sake</figcaption>
+            <figcaption id="order-name">$25.00<br>Sake</figcaption>
             <figcaption id="order-info">A smooth yet crisp Sake that creates an exceptional balance on the palate.
             </figcaption>
-            <input type="number" name="specialty" id="inputbox" value="0" min="0">
+            <form method="get" action="php/add_to_cart_hp_dotd.php">
+                <label><input type=submit value="Add to cart" name="sake"></label>
+            </form>
         </figure>
         <figure class="menu">
             <img src="assets/drinks_5.png" style="padding-top: 51px;" />
-            <figcaption id="order-name">Matcha</figcaption>
+            <figcaption id="order-name">$5.00<br>Matcha</figcaption>
             <figcaption id="order-info">Our house blend recipe of thick, silky matcha that is freshly-whisked.
             </figcaption>
-            <input type="number" name="specialty" id="inputbox" value="0" min="0">
+            <form method="get" action="php/add_to_cart_hp_dotd.php">
+                <label><input type=submit value="Add to cart" name="matcha"></label>
+            </form>
         </figure>
         <figure class="menu">
             <img src="assets/drink_6.png" />
-            <figcaption id="order-name">Houjicha</figcaption>
+            <figcaption id="order-name">$5.00<br>Houjicha</figcaption>
             <figcaption id="order-info">Roasted high-quality green tea that is soothing and calming.</figcaption>
-            <input type="number" name="specialty" id="inputbox" value="0" min="0">
+            <form method="get" action="php/add_to_cart_hp_dotd.php">
+                <label><input type=submit value="Add to cart" name="houjicha"></label>
+            </form>
         </figure><br>
         <input type="button" class="button" value="Add to cart">
     </div>

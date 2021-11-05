@@ -1,3 +1,7 @@
+<?php
+include "php/setup_session.php";
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -5,20 +9,34 @@
     <title>Yin Yang Ramen House</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="index.css">
+    
 </head>
 
 <body>
     <div class="topnav">
         <div class="topnav-left">
-            <a href="index.html"><img src="assets/logo.png"></a>
+            <a href="index.php"><img src="assets/logo.png"></a>
         </div>
         <div class="topnav-right">
-            <a href="index.html">Home</a>
-            <a href="aboutus.html">About us</a>
-            <a href="ordernow.html">Order now</a>
-            <a href="careers.html">Careers</a>
-            <a href="contactus.html">Contact us</a>
-            <a href="shoppingcart.html"><img src="assets/cart.png" width="60%" height="auto"></a>
+            <a href="index.php">Home</a>
+            <a href="aboutus.php">About us</a>
+            <a href="ordernow.php">Order now</a>
+            <a href="careers.php">Careers</a>
+            <a href="contactus.php">Contact us</a>
+            <a href="shoppingcart.php">
+                <span id="shopping_cart">
+                    <img src="assets/cart.png" width="50%" height="auto">
+                    <?php
+                    $total = 0;
+                    for ($i = 0; $i < count($_SESSION['cart']); $i++) {
+                        if ($_SESSION['cart'][$i] > 0) {
+                            $total += $_SESSION['cart'][$i];
+                        }
+                    }
+                    echo $total;
+                    ?>
+                </span>
+            </a>
         </div>
     </div>
     <div>
@@ -29,48 +47,59 @@
         <figure class="menu">
             <!-- Some images are taken from: https://takagiramen.com/menu/ -->
             <img src="assets/sides_1.png" />
-            <figcaption id="order-name">Edamame</figcaption>
+            <figcaption id="order-name">$2.00<br>Edamame</figcaption>
             <figcaption id="order-info">Freshly boiled soybeans served with a sprinkle of sea salt and furikake.
             </figcaption>
-            <input type="number" name="specialty" id="inputbox" value="0" min="0">
+            <form method="get" action="php/add_to_cart_hp_dotd.php">
+                <label><input type=submit value="Add to cart" name="edamame"></label>
+            </form>
         </figure>
         <figure class=" menu">
             <!-- This image is taken from: https://sushitei.com/menu/Sushi%20Tei%20Grand%20Menu.pdf -->
             <img src="assets/sides_2.png" />
-            <figcaption id="order-name" style="padding-top: 10px;">Sashimi</figcaption>
+            <figcaption id="order-name" style="padding-top: 10px;">$8.00<br>Sashimi</figcaption>
             <figcaption id="order-info">Our chef's delectable omakase sashimi platter, air-flown directly from Japan.
             </figcaption>
-            <input type="number" name="specialty" id="inputbox" value="0" min="0">
+            <form method="get" action="php/add_to_cart_hp_dotd.php">
+                <label><input type=submit value="Add to cart" name="sashimi"></label>
+            </form>
         </figure>
         <figure class="menu">
             <img src="assets/sides_3.png" />
-            <figcaption id="order-name">Chawanmushi</figcaption>
+            <figcaption id="order-name">$5.00<br>Chawanmushi</figcaption>
             <figcaption id="order-info">Steamed egg custard with shimeji mushroom, gingko nut, chicken and ham.
             </figcaption>
-            <input type="number" name="specialty" id="inputbox" value="0" min="0">
+            <form method="get" action="php/add_to_cart_hp_dotd.php">
+                <label><input type=submit value="Add to cart" name="chawanmushi"></label>
+            </form>
         </figure><br>
         <figure class="menu">
             <img src="assets/sides_4.png" />
-            <figcaption id="order-name">Takoyaki</figcaption>
+            <figcaption id="order-name">$4.00<br>Takoyaki</figcaption>
             <figcaption id="order-info">Japanese octopus balls drizzled with Kewpie mayonnaise and nori flakes.
             </figcaption>
-            <input type="number" name="specialty" id="inputbox" value="0" min="0">
+            <form method="get" action="php/add_to_cart_hp_dotd.php">
+                <label><input type=submit value="Add to cart" name="takoyaki"></label>
+            </form>
         </figure>
         <figure class="menu">
             <img src="assets/sides_5.png" />
-            <figcaption id="order-name">Sushi</figcaption>
+            <figcaption id="order-name">$13.00<br>Sushi</figcaption>
             <figcaption id="order-info">Premium selection of top-grade, carefully crafted assorted sushi.</figcaption>
-            <input type="number" name="specialty" id="inputbox" value="0" min="0">
+            <form method="get" action="php/add_to_cart_hp_dotd.php">
+                <label><input type=submit value="Add to cart" name="sushi"></label>
+            </form>
         </figure>
         <figure class="menu">
             <img src="assets/sides_6.png" />
-            <figcaption id="order-name">Gyoza</figcaption>
+            <figcaption id="order-name">$9.00<br>Gyoza</figcaption>
             <figcaption id="order-info">Pan-fried Japanese chicken dumplings served with crunchy slices of shredded
                 cabbage.
             </figcaption>
-            <input type="number" name="specialty" id="inputbox" value="0" min="0">
+            <form method="get" action="php/add_to_cart_hp_dotd.php">
+                <label><input type=submit value="Add to cart" name="gyoza"></label>
+            </form>
         </figure><br>
-        <input type="button" class="button" value="Add to cart">
     </div>
 </body>
 

@@ -1,3 +1,7 @@
+<?php
+include "php/setup_session.php";
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -5,20 +9,35 @@
     <title>Yin Yang Ramen House</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="index.css">
+    
+    <script type="text/javascript" src="javascript/contact_validator.js"></script>
 </head>
 
 <body>
     <div class="topnav">
         <div class="topnav-left">
-            <a href="index.html"><img src="assets/logo.png"></a>
+            <a href="index.php"><img src="assets/logo.png"></a>
         </div>
         <div class="topnav-right">
-            <a href="index.html">Home</a>
-            <a href="aboutus.html">About us</a>
-            <a href="ordernow.html">Order now</a>
-            <a href="careers.html">Careers</a>
-            <a href="contactus.html">Contact us</a>
-            <a href="shoppingcart.html"><img src="assets/cart.png" width="60%" height="auto"></a>
+            <a href="index.php">Home</a>
+            <a href="aboutus.php">About us</a>
+            <a href="ordernow.php">Order now</a>
+            <a href="careers.php">Careers</a>
+            <a href="contactus.php">Contact us</a>
+            <a href="shoppingcart.php">
+                <span id="shopping_cart">
+                    <img src="assets/cart.png" width="50%" height="auto">
+                    <?php
+                    $total = 0;
+                    for ($i = 0; $i < count($_SESSION['cart']); $i++) {
+                        if ($_SESSION['cart'][$i] > 0) {
+                            $total += $_SESSION['cart'][$i];
+                        }
+                    }
+                    echo $total;
+                    ?>
+                </span>
+            </a>
         </div>
     </div>
     <div class="content-middle">
@@ -27,7 +46,33 @@
             width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         <p class="header-1">Contact us</p>
         <p>Don't hesitate to contact us! We will get back to you within 24 hours.</p>
+    <form action="feedback_form.php" method="post">
+        <table class="careers-contact-table" border="0">
+            <tr>
+                <td>&#42;Name:</td>
+                <td><input type="text" name="ContactName" id="ContactName" size=30 required
+                        placeholder="Enter your name here"></td>
+            </tr>
+            <tr>
+                <td>&#42;Email:</td>
+                <td><input type="email" name="ContactEmail" id="ContactEmail" required
+                        placeholder="Enter your Email-ID here"></td>
+            </tr>
+            <tr>
+                <td>&#42;Phone No.:</td>
+                <td><input type="tel" name="ContactNumber" id="ContactNumber" required
+                        placeholder="12345678"></td>
+            </tr>
+            <tr>
+                <td>&#42;Feedback:</td>
+            <td><textarea type="textarea" name="Feedback" id="Feedback" rows="4" cols="40"  required placeholder="Enter feedback here"></textarea></td>
+            </tr>
+        </table>
+        <input type="submit" value="Apply Now"><br>
+        <input type="reset" value="Clear">
+    </form>
     </div>
+    <script type="text/javascript" src="javascript/contact_validator2.js"></script>
 
     <footer id="footer">
         <div class="footer-left">

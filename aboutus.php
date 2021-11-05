@@ -1,3 +1,7 @@
+<?php
+include "php/setup_session.php";
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -5,26 +9,41 @@
     <title>Yin Yang Ramen House</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="index.css">
+    
 </head>
 
 <body>
     <div class="topnav">
         <div class="topnav-left">
-            <a href="index.html"><img src="assets/logo.png"></a>
+            <a href="index.php"><img src="assets/logo.png"></a>
         </div>
         <div class="topnav-right">
-            <a href="index.html">Home</a>
-            <a href="aboutus.html">About us</a>
-            <a href="ordernow.html">Order now</a>
-            <a href="careers.html">Careers</a>
-            <a href="contactus.html">Contact us</a>
-            <a href="shoppingcart.html"><img src="assets/cart.png" width="60%" height="auto"></a>
+            <a href="index.php">Home</a>
+            <a href="aboutus.php">About us</a>
+            <a href="ordernow.php">Order now</a>
+            <a href="careers.php">Careers</a>
+            <a href="contactus.php">Contact us</a>
+            <a href="shoppingcart.php">
+                <span id="shopping_cart">
+                    <img src="assets/cart.png" width="50%" height="auto">
+                    <?php
+                    $total = 0;
+                    for ($i = 0; $i < count($_SESSION['cart']); $i++) {
+                        if ($_SESSION['cart'][$i] > 0) {
+                            $total += $_SESSION['cart'][$i];
+                        }
+                    }
+                    echo $total;
+                    ?>
+                </span>
+            </a>
         </div>
     </div>
     <div class="content-middle">
-        <img src="assets/careerbg1.png" id="header-image">
-        <p class="header-1">Careers</p>
-        <p>Join the Yin Yang Family now! Fill up the form to get started.</p>
+        <img src="assets/aboutusbg.jpeg" id="header-image">
+        <p class="header-1">About us</p>
+        <img src="assets/aboutus_1.png" id="bg-image" style="padding-top: 50px;">
+        <img src="assets/aboutus_2.png" id="bg-image" style="padding-top: 100px;">
     </div>
 
     <footer id="footer">
