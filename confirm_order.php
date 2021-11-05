@@ -60,7 +60,7 @@ include "php/setup_session.php";
                 $rand = rand();
             } while($rand === 0);
             $message = "Dear Customer, thank you for your order! <br> Your receipt number is $rand. Kindly show this to the delivery man to collect your food. <br><br>You ordered: <br><br>" ;
-            $email_message = "Dear Customer, thank you for your order! <br> Your receipt number is $rand. Kindly show this to the delivery man to collect your food. \n\nYou ordered:\n\n" ;
+            $email_message = "Dear Customer, thank you for your order! Your receipt number is $rand. Kindly show this to the delivery man to collect your food. \n\nYou ordered:\n\n" ;
             $total = 0;
             $sql = "SELECT product_name, product_price FROM f32ee.yy_products";
             if(!$result = mysqli_query($conn, $sql)){

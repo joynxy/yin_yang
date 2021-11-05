@@ -49,7 +49,7 @@ include "php/setup_session.php";
             <img src="assets/drinks_1.png" />
             <figcaption id="order-name">$7.00<br>Citrus Lime Cocktail</figcaption>
             <figcaption id="order-info">A refreshing cocktail mix of lemon, lime and orange.</figcaption>
-            <form method="get" action="php/add_to_cart_hp_dotd.php">
+            <form method="get" action="php/add_to_cart.php">
                 <label><input type=submit value="Add to cart" name="citrus"></label>
             </form>
         </figure>
@@ -57,7 +57,7 @@ include "php/setup_session.php";
             <img src="assets/drinks_2.png" style="height:250px; width: auto" ; />
             <figcaption id="order-name">$7.00<br>Yuzu Fizz</figcaption>
             <figcaption id="order-info">Sparkling, zesty blend of honey Yuzu with lemon juice and soda.</figcaption>
-            <form method="get" action="php/add_to_cart_hp_dotd.php">
+            <form method="get" action="php/add_to_cart.php">
                 <label><input type=submit value="Add to cart" name="yuzu"></label>
             </form>
         </figure>
@@ -66,7 +66,7 @@ include "php/setup_session.php";
             <figcaption id="order-name">$6.00<br>Grapefruit Plum Soda</figcaption>
             <figcaption id="order-info">Boost immunity with this anti-oxidising grapefruit and Tsuyu Akane
                 plum soda.</figcaption>
-            <form method="get" action="php/add_to_cart_hp_dotd.php">
+            <form method="get" action="php/add_to_cart.php">
                 <label><input type=submit value="Add to cart" name="plum"></label>
             </form>
         </figure><br>
@@ -75,7 +75,7 @@ include "php/setup_session.php";
             <figcaption id="order-name">$25.00<br>Sake</figcaption>
             <figcaption id="order-info">A smooth yet crisp Sake that creates an exceptional balance on the palate.
             </figcaption>
-            <form method="get" action="php/add_to_cart_hp_dotd.php">
+            <form method="get" action="php/add_to_cart.php">
                 <label><input type=submit value="Add to cart" name="sake"></label>
             </form>
         </figure>
@@ -84,7 +84,7 @@ include "php/setup_session.php";
             <figcaption id="order-name">$5.00<br>Matcha</figcaption>
             <figcaption id="order-info">Our house blend recipe of thick, silky matcha that is freshly-whisked.
             </figcaption>
-            <form method="get" action="php/add_to_cart_hp_dotd.php">
+            <form method="get" action="php/add_to_cart.php">
                 <label><input type=submit value="Add to cart" name="matcha"></label>
             </form>
         </figure>
@@ -92,7 +92,7 @@ include "php/setup_session.php";
             <img src="assets/drink_6.png" />
             <figcaption id="order-name">$5.00<br>Houjicha</figcaption>
             <figcaption id="order-info">Roasted high-quality green tea that is soothing and calming.</figcaption>
-            <form method="get" action="php/add_to_cart_hp_dotd.php">
+            <form method="get" action="php/add_to_cart.php">
                 <label><input type=submit value="Add to cart" name="houjicha"></label>
             </form>
         </figure><br>

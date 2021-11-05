@@ -24,7 +24,7 @@ function checkEmail(event) {
 
 function checkAddress(event) {
 	var CustAddress = event.currentTarget;
-	var pos = CustAddress.value.search(/^[a-zA-Z0-9]+$/);
+	var pos = CustAddress.value.search(/^.*$/);
 
 	if (pos != 0) {
 		alert("The name you entered (" + CustAddress.value + ") is not in the correct form. \n" +
