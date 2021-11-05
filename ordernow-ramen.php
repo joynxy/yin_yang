@@ -50,7 +50,7 @@ include "php/setup_session.php";
             <figcaption id="order-name">$18.00<br>Yin Yang Specialty Ramen</figcaption>
             <figcaption id="order-info">Tender chashu pork slices is paired with fresh handcrafted ramen in our
                 signature Tonkotsu broth that has been boiled for 12 hours.</figcaption>
-            <form method="get" action="php/add_to_cart_hp_dotd.php">
+            <form method="get" action="php/add_to_cart.php">
                 <label><input type=submit value="Add to cart" name="specialty"></label>
             </form>
         </figure>
@@ -60,7 +60,7 @@ include "php/setup_session.php";
             <figcaption id="order-name">$16.00<br>Miso Ramen</figcaption>
             <figcaption id="order-info">Imported directly from Japan, the miso creates a rich and flavourful broth that
                 complements the sweet corn topping.</figcaption>
-            <form method="get" action="php/add_to_cart_hp_dotd.php">
+            <form method="get" action="php/add_to_cart.php">
                 <label><input type=submit value="Add to cart" name="miso"></label>
             </form>
         </figure>
@@ -70,7 +70,7 @@ include "php/setup_session.php";
             <figcaption id="order-name">$17.00<br>Karaka Ramen</figcaption>
             <figcaption id="order-info">A unique concoction of chillies is infused into the thick Tonkotsu soup, giving
                 a spicy kick to this incredible bowl of ramen.</figcaption>
-            <form method="get" action="php/add_to_cart_hp_dotd.php">
+            <form method="get" action="php/add_to_cart.php">
                 <label><input type=submit value="Add to cart" name="karaka"></label>
             </form>
         </figure><br>
@@ -80,7 +80,7 @@ include "php/setup_session.php";
             <figcaption id="order-name">$17.00<br>Black Tonkotsu Ramen</figcaption>
             <figcaption id="order-info">The essence of Japanese black garlic is steeped into the broth,
                 creating an intense flavour to pair with crunchy black fungus.</figcaption>
-            <form method="get" action="php/add_to_cart_hp_dotd.php">
+            <form method="get" action="php/add_to_cart.php">
                 <label><input type=submit value="Add to cart" name="tonkotsu"></label>
             </form>
         </figure>
@@ -90,7 +90,7 @@ include "php/setup_session.php";
             <figcaption id="order-name">$17.00<br>Mazesoba Ramen</figcaption>
             <figcaption id="order-info">Garnished with a lavish portion of sautéed pork, sweet corn and green scallions,
                 savour the springy texture of our handmade ramen.</figcaption>
-            <form method="get" action="php/add_to_cart_hp_dotd.php">
+            <form method="get" action="php/add_to_cart.php">
                 <label><input type=submit value="Add to cart" name="mazesoba"></label>
             </form>
         </figure>
@@ -100,7 +100,7 @@ include "php/setup_session.php";
             <figcaption id="order-name">$17.00<br>Tantanmen Ramen</figcaption>
             <figcaption id="order-info">Fermented beans and sesame gives this ramen a fragrant aroma and exquisite
                 taste, topped off with slices of braised meat. </figcaption>
-            <form method="get" action="php/add_to_cart_hp_dotd.php">
+            <form method="get" action="php/add_to_cart.php">
                 <label><input type=submit value="Add to cart" name="tantanmen"></label>
             </form>
         </figure><br>

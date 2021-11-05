@@ -50,7 +50,7 @@ include "php/setup_session.php";
             <figcaption id="order-name">$2.00<br>Edamame</figcaption>
             <figcaption id="order-info">Freshly boiled soybeans served with a sprinkle of sea salt and furikake.
             </figcaption>
-            <form method="get" action="php/add_to_cart_hp_dotd.php">
+            <form method="get" action="php/add_to_cart.php">
                 <label><input type=submit value="Add to cart" name="edamame"></label>
             </form>
         </figure>
@@ -60,7 +60,7 @@ include "php/setup_session.php";
             <figcaption id="order-name" style="padding-top: 10px;">$8.00<br>Sashimi</figcaption>
             <figcaption id="order-info">Our chef's delectable omakase sashimi platter, air-flown directly from Japan.
             </figcaption>
-            <form method="get" action="php/add_to_cart_hp_dotd.php">
+            <form method="get" action="php/add_to_cart.php">
                 <label><input type=submit value="Add to cart" name="sashimi"></label>
             </form>
         </figure>
@@ -69,7 +69,7 @@ include "php/setup_session.php";
             <figcaption id="order-name">$5.00<br>Chawanmushi</figcaption>
             <figcaption id="order-info">Steamed egg custard with shimeji mushroom, gingko nut, chicken and ham.
             </figcaption>
-            <form method="get" action="php/add_to_cart_hp_dotd.php">
+            <form method="get" action="php/add_to_cart.php">
                 <label><input type=submit value="Add to cart" name="chawanmushi"></label>
             </form>
         </figure><br>
@@ -78,7 +78,7 @@ include "php/setup_session.php";
             <figcaption id="order-name">$4.00<br>Takoyaki</figcaption>
             <figcaption id="order-info">Japanese octopus balls drizzled with Kewpie mayonnaise and nori flakes.
             </figcaption>
-            <form method="get" action="php/add_to_cart_hp_dotd.php">
+            <form method="get" action="php/add_to_cart.php">
                 <label><input type=submit value="Add to cart" name="takoyaki"></label>
             </form>
         </figure>
@@ -86,7 +86,7 @@ include "php/setup_session.php";
             <img src="assets/sides_5.png" />
             <figcaption id="order-name">$13.00<br>Sushi</figcaption>
             <figcaption id="order-info">Premium selection of top-grade, carefully crafted assorted sushi.</figcaption>
-            <form method="get" action="php/add_to_cart_hp_dotd.php">
+            <form method="get" action="php/add_to_cart.php">
                 <label><input type=submit value="Add to cart" name="sushi"></label>
             </form>
         </figure>
@@ -96,7 +96,7 @@ include "php/setup_session.php";
             <figcaption id="order-info">Pan-fried Japanese chicken dumplings served with crunchy slices of shredded
                 cabbage.
             </figcaption>
-            <form method="get" action="php/add_to_cart_hp_dotd.php">
+            <form method="get" action="php/add_to_cart.php">
                 <label><input type=submit value="Add to cart" name="gyoza"></label>
             </form>
         </figure><br>
