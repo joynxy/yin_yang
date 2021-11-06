@@ -40,10 +40,9 @@ include "php/setup_session.php";
         </div>
     </div>
     <div>
-        <img src="assets/ramenbg.jpeg" id="header-image">
+        <img src="assets/complete.png" style="height:150px; width:auto; clear: both; display: block; margin-left: auto; margin-right: auto;">
     </div>
     <div class="content-middle">
-        <p>Order details</p>
         <?php
             include "db_connect.php";
             $to = 'f32ee@localhost';
@@ -51,7 +50,7 @@ include "php/setup_session.php";
             $place_order_Email = $_POST['place_order_Email'];
             $place_order_Address = $_POST['place_order_Address'];
             $place_order_Card = $_POST['place_order_Card'];
-            $subject = "Order confirmation";
+            $subject = "Order Confirmation";
             $headers = 'From: f32ee@localhost' . "\r\n" .
             'Reply-To: f32ee@localhost' . "\r\n" .
             'X-Mailer: PHP/' . phpversion();
@@ -59,8 +58,9 @@ include "php/setup_session.php";
             do {
                 $rand = rand();
             } while($rand === 0);
-            $message = "Dear Customer, thank you for your order! <br> Your receipt number is $rand. Kindly show this to the delivery man to collect your food. <br><br>You ordered: <br><br>" ;
-            $email_message = "Dear Customer, thank you for your order! Your receipt number is $rand. Kindly show this to the delivery man to collect your food. \n\nYou ordered:\n\n" ;
+            $message = "Dear Customer, thank you for your order! <br><br> Your receipt number is $rand.<br>
+             Kindly show this to the delivery personnel to collect your food. <br><br>You ordered: <br><br>" ;
+            $email_message = "Dear Customer, thank you for your order! Your receipt number is $rand.\nKindly show this to the delivery personnel to collect your food.\n\nYou ordered:\n\n" ;
             $total = 0;
             $sql = "SELECT product_name, product_price FROM f32ee.yy_products";
             if(!$result = mysqli_query($conn, $sql)){

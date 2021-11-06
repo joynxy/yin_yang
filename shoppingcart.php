@@ -52,7 +52,7 @@ if (isset($_GET['minus'])) {
         </div>
     </div>
     <div class="content-middle">
-        <img src="assets/shoppingcartbg.png" id="bg-image" style="padding-bottom: 50px;">
+        <img src="assets/shoppingcartbg.png" id="bg-image" style="height:200px; width:auto;">
         <p class="header-1">Confirm Your Order</p>
         <?php
         $total = 0;
@@ -90,9 +90,9 @@ if (isset($_GET['minus'])) {
                         if ($_SESSION['cart'][$i] > 0) {
                             echo "<tr>";
                             echo "<td class='cart_table_padding'>" . $row['product_name'] . "</td>";
-                            echo '<td><a href="' . "?minus=" . $i . '"><img src="media/pics/minus_symbol.png" class="cc_minus"></a>';
+                            echo '<td><a href="' . "?minus=" . $i . '"><img src="assets/deduct.png" class="cc_minus" style="height:18px; width:18px; padding-right:5px;"></a>';
                             echo $_SESSION["cart"][$i];
-                            echo '<a href="' . "?plus=" . $i . '"><img src="media/pics/plus_symbol.png" class="cc_plus"></a>';
+                            echo '<a href="' . "?plus=" . $i . '"><img src="assets/add.png" class="cc_plus" style="height:18px; width:18px; padding-left:5px;"></a>';
                             echo "<td>$" . $row['product_price'] . "</td>";
                             echo "</tr>";
                             $total = $total + (float)$row['product_price'] * (int)$_SESSION['cart'][$i];

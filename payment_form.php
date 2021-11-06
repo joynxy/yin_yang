@@ -58,15 +58,15 @@ include "php/setup_session.php";
                 </tr>
                 <tr>
                     <td>&#42;Credit Card Number:</td>
-                    <td><input type="text" name="place_order_Card" id="place_order_Card" required placeholder="Enter 16 digit card number"></td>
+                    <td><input type="text" name="place_order_Card" id="place_order_Card" size=25 required placeholder="Enter 16 digit card number"></td>
                 </tr>
                 <tr>
                     <td>&#42;CVC Number:</td>
-                    <td><input type="text" name="place_order_CVC" id="place_order_CVC" required placeholder="Enter 3 digit CVC number"></td>
+                    <td><input type="text" name="place_order_CVC" id="place_order_CVC" size=25 required placeholder="Enter 3 digit CVC number"></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td><input type="submit" value="Confirm order"></td>
+                    <td><input type="submit" value="Confirm order" class="button-cart"></td>
                 </tr>
             </table>
         </form>
