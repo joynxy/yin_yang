@@ -92,7 +92,7 @@ include "php/setup_session.php";
         </figure>
         <figure class="menu">
             <img src="assets/sides_6.png" />
-            <figcaption id="order-name">$9.00<br>Gyoza<br></figcaption>
+            <figcaption id="order-name">$9.00<br><br>Gyoza</figcaption>
             <figcaption id="order-info">Pan-fried Japanese chicken dumplings served with crunchy slices of shredded
                 cabbage.
             </figcaption>
