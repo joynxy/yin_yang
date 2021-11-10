@@ -47,61 +47,61 @@ include "php/setup_session.php";
         <p class="header-1">Ramen</p>
         <figure class="menu">
             <img src="assets/ramen_1.png" />
-            <figcaption id="order-name">$18.00<br>Yin Yang Specialty Ramen</figcaption>
+            <figcaption id="order-name">$18.00<br><br>Yin Yang Specialty Ramen</figcaption>
             <figcaption id="order-info">Tender chashu pork slices is paired with fresh handcrafted ramen in our
                 signature Tonkotsu broth that has been boiled for 12 hours.</figcaption>
             <form method="get" action="php/add_to_cart.php">
-                <label><input type=submit value="Add to cart" name="specialty"></label>
+                <label><input type=submit value="Add to cart" name="specialty" class="button-cart"></label>
             </form>
         </figure>
 
         <figure class=" menu">
             <img src="assets/ramen_2.png" />
-            <figcaption id="order-name">$16.00<br>Miso Ramen</figcaption>
+            <figcaption id="order-name">$16.00<br><br>Miso Ramen</figcaption>
             <figcaption id="order-info">Imported directly from Japan, the miso creates a rich and flavourful broth that
                 complements the sweet corn topping.</figcaption>
             <form method="get" action="php/add_to_cart.php">
-                <label><input type=submit value="Add to cart" name="miso"></label>
+                <label><input type=submit value="Add to cart" name="miso" class="button-cart"></label>
             </form>
         </figure>
 
         <figure class="menu">
             <img src="assets/ramen_3.png" />
-            <figcaption id="order-name">$17.00<br>Karaka Ramen</figcaption>
+            <figcaption id="order-name">$17.00<br><br>Karaka Ramen</figcaption>
             <figcaption id="order-info">A unique concoction of chillies is infused into the thick Tonkotsu soup, giving
                 a spicy kick to this incredible bowl of ramen.</figcaption>
             <form method="get" action="php/add_to_cart.php">
-                <label><input type=submit value="Add to cart" name="karaka"></label>
+                <label><input type=submit value="Add to cart" name="karaka" class="button-cart"></label>
             </form>
         </figure><br>
 
         <figure class="menu">
             <img src="assets/ramen_4.png" />
-            <figcaption id="order-name">$17.00<br>Black Tonkotsu Ramen</figcaption>
+            <figcaption id="order-name">$17.00<br><br>Black Tonkotsu Ramen</figcaption>
             <figcaption id="order-info">The essence of Japanese black garlic is steeped into the broth,
                 creating an intense flavour to pair with crunchy black fungus.</figcaption>
             <form method="get" action="php/add_to_cart.php">
-                <label><input type=submit value="Add to cart" name="tonkotsu"></label>
+                <label><input type=submit value="Add to cart" name="tonkotsu" class="button-cart"></label>
             </form>
         </figure>
 
         <figure class="menu">
             <img src="assets/ramen_5.png" />
-            <figcaption id="order-name">$17.00<br>Mazesoba Ramen</figcaption>
+            <figcaption id="order-name">$17.00<br><br>Mazesoba Ramen</figcaption>
             <figcaption id="order-info">Garnished with a lavish portion of sautéed pork, sweet corn and green scallions,
                 savour the springy texture of our handmade ramen.</figcaption>
             <form method="get" action="php/add_to_cart.php">
-                <label><input type=submit value="Add to cart" name="mazesoba"></label>
+                <label><input type=submit value="Add to cart" name="mazesoba" class="button-cart"></label>
             </form>
         </figure>
 
         <figure class="menu">
             <img src="assets/ramen_6.png" />
-            <figcaption id="order-name">$17.00<br>Tantanmen Ramen</figcaption>
+            <figcaption id="order-name">$17.00<br><br>Tantanmen Ramen</figcaption>
             <figcaption id="order-info">Fermented beans and sesame gives this ramen a fragrant aroma and exquisite
                 taste, topped off with slices of braised meat. </figcaption>
             <form method="get" action="php/add_to_cart.php">
-                <label><input type=submit value="Add to cart" name="tantanmen"></label>
+                <label><input type=submit value="Add to cart" name="tantanmen" class="button-cart"></label>
             </form>
         </figure><br>
     </div>
@@ -139,9 +139,9 @@ include "php/setup_session.php";
     </div>
     <div class="footer-right">
         Follow us:<br>
-        <a href="https://www.facebook.com/"><img src="assets/facebook.png" class="footer-right-icons"></a>
-        <a href="https://www.instagram.com/"><img src="assets/instagram.png" class="footer-right-icons"></a>
-        <a href="https://twitter.com/?lang=en"><img src="assets/twitter.png" class="footer-right-icons"></a>
+        <img src="assets/facebook.png" class="footer-right-icons">
+        <img src="assets/instagram.png" class="footer-right-icons">
+        <img src="assets/twitter.png" class="footer-right-icons">
     </div>
 </footer>
 <div id="copyright">

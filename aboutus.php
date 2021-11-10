@@ -78,9 +78,9 @@ include "php/setup_session.php";
         </div>
         <div class="footer-right">
             Follow us:<br>
-            <a href="https://www.facebook.com/"><img src="assets/facebook.png" class="footer-right-icons"></a>
-            <a href="https://www.instagram.com/"><img src="assets/instagram.png" class="footer-right-icons"></a>
-            <a href="https://twitter.com/?lang=en"><img src="assets/twitter.png" class="footer-right-icons"></a>
+            <img src="assets/facebook.png" class="footer-right-icons">
+            <img src="assets/instagram.png" class="footer-right-icons">
+            <img src="assets/twitter.png" class="footer-right-icons">
         </div>
     </footer>
     <div id="copyright">

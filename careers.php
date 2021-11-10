@@ -65,8 +65,8 @@ include "php/setup_session.php";
 			    <td><textarea type="textarea" name="experience" id="experience" rows="4" cols="40"  required placeholder="Enter your past experience here"></textarea></td>
                 </tr>
             </table>
-            <input type="submit" value="Apply Now"><br>
-            <input type="reset" value="Clear">
+            <input type="submit" value="Apply Now" class="button-cart" style="margin-left:auto; margin-right:40px; margin-top:20px">
+            <input type="reset" value="Clear" class="button-clear" style="margin-top:20px">
         </form>
     </div>
     <script type="text/javascript" src="javascript/career_validator2.js"></script>
@@ -103,9 +103,9 @@ include "php/setup_session.php";
         </div>
         <div class="footer-right">
             Follow us:<br>
-            <a href="https://www.facebook.com/"><img src="assets/facebook.png" class="footer-right-icons"></a>
-            <a href="https://www.instagram.com/"><img src="assets/instagram.png" class="footer-right-icons"></a>
-            <a href="https://twitter.com/?lang=en"><img src="assets/twitter.png" class="footer-right-icons"></a>
+            <img src="assets/facebook.png" class="footer-right-icons">
+            <img src="assets/instagram.png" class="footer-right-icons">
+            <img src="assets/twitter.png" class="footer-right-icons">
         </div>
     </footer>
     <div id="copyright">

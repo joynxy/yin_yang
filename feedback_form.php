@@ -40,17 +40,24 @@ include "php/setup_session.php";
         </div>
     </div>
     <div class="content-middle">
-        <p class="header-1">Contact us</p>
         <?php
+            $to = 'f32ee@localhost';
+            $headers = 'From: f32ee@localhost' . "\r\n" .
+            'Reply-To: f32ee@localhost' . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+            $subject = "Feedback";
             $ContactName = $_POST['ContactName'];
             $ContactEmail = $_POST['ContactEmail'];
             $ContactNumber = $_POST['ContactNumber'];
             $Feedback = $_POST['Feedback'];
-            echo "Dear customer, thank you for contacting us. We will be contacting you shortly.<b>";
+            echo '<img src="assets/complete.png" style="height:150px; width:auto; padding-bottom:50px"><br>';
+            echo "Dear customer, thank you for contacting us. <br><br> We have received your feedback and will be contacting you shortly.<b>";
             $sql = "INSERT INTO f32ee.yy_feedback (feedback_id, feedback_name, feedback_email, feedback_phone, feedback) VALUES (NULL, '$ContactName', '$ContactEmail', '$ContactNumber', '$Feedback')";
             if(!$result = mysqli_query($conn, $sql)){
                 echo "Something went wrong when inserting data to database: " . mysqli_error($conn);
             }
+            $CustEmail_message = "Dear " . $ContactName . ", thank you for your feedback.\nWe are sorry to hear that you did not have a great experience while dining with us.\n\nWe would like to learn more about your specific situation and make things right. If you would not mind giving us a call at 6123 4567 at your earliest convenience, it would be greatly appreciated.\n\nWe look forward to speaking with you and working towards earning back your business.";
+            mail($to, $subject, $CustEmail_message, $headers, '-ff32ee@localhost');
         ?>
         <br>
         <br>
@@ -90,9 +97,9 @@ include "php/setup_session.php";
         </div>
         <div class="footer-right">
             Follow us:<br>
-            <a href="https://www.facebook.com/"><img src="assets/facebook.png" class="footer-right-icons"></a>
-            <a href="https://www.instagram.com/"><img src="assets/instagram.png" class="footer-right-icons"></a>
-            <a href="https://twitter.com/?lang=en"><img src="assets/twitter.png" class="footer-right-icons"></a>
+            <img src="assets/facebook.png" class="footer-right-icons">
+            <img src="assets/instagram.png" class="footer-right-icons">
+            <img src="assets/twitter.png" class="footer-right-icons">
         </div>
     </footer>
     <div id="copyright">

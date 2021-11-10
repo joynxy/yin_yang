@@ -40,9 +40,6 @@ include "db_connect.php";
             </a>
         </div>
     </div>
-    <div>
-        <img src="assets/ramenbg.jpeg" id="header-image">
-    </div>
     <div class="home-middle">
     <?php
             $to = 'f32ee@localhost';
@@ -56,12 +53,13 @@ include "db_connect.php";
             if(strlen(trim($_POST['experience'])) > 0){
                 $experience = $_POST['experience'];
             }
+            echo '<img src="assets/complete.png" style="height:150px; width:auto">';
             $subject = "Job application";
             $message = "Dear " . $CustName . ", thank you for your application! <br> Please confirm your details: <br><br>" ;
             $CustEmail_message = "Dear " . $CustName . ", thank you for your application!\nPlease confirm your details:\n\n";
             $message .= "<br>Name: " . $CustName . "<br>";
             $CustEmail_message .= "\nName: " . $CustName. "\n";
-            $message .= "<br>Start Date: " . $startDate . "<br>";
+            $message .= "Start Date: " . $startDate . "<br>";
             $CustEmail_message .= "\nStart Date: " . $startDate. "\n";
             if(strlen($experience) > 0){
                 $message .= "Experience: " . $experience . "<br>";
@@ -77,7 +75,7 @@ include "db_connect.php";
                 echo "Something went wrong when inserting data to database: " . mysqli_error($conn);
             }
             $message .= "<br>Confirmation mail sent to " . $CustEmail;
-            echo '<span style="display:block;margin-top:30px;text-align:center;">' . $message . '</span>';
+            echo '<span style="display:block;margin-top:30px;text-align:center;">' . $message . '</span><br><br>';
             mail($to, $subject, $CustEmail_message, $headers, '-ff32ee@localhost');
         ?>
     </div>
@@ -115,9 +113,9 @@ include "db_connect.php";
     </div>
     <div class="footer-right">
         Follow us:<br>
-        <a href="https://www.facebook.com/"><img src="assets/facebook.png" class="footer-right-icons"></a>
-        <a href="https://www.instagram.com/"><img src="assets/instagram.png" class="footer-right-icons"></a>
-        <a href="https://twitter.com/?lang=en"><img src="assets/twitter.png" class="footer-right-icons"></a>
+        <img src="assets/facebook.png" class="footer-right-icons">
+        <img src="assets/instagram.png" class="footer-right-icons">
+        <img src="assets/twitter.png" class="footer-right-icons">
     </div>
 </footer>
 <div id="copyright">
